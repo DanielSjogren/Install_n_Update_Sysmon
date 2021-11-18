@@ -99,10 +99,10 @@ If ($InstallSysmonAsaService) {
     Write-Output "Installing Sysmon as a service"
     If ($ProcessBit -eq "64-Bit") {
         Write-Output "- Using 64-Bit version"
-        & "$SysmonDir\Sysmon64.exe" -accepteula -i "$SysmonConfigFilePath"
+        & "$SysmonDownloadDir\Sysmon64.exe" -accepteula -i "$SysmonConfigFilePath"
     } Else {
         Write-Output "- Using 32-Bit version"
-        & "$SysmonDir\Sysmon.exe" -accepteula -i "$SysmonConfigFilePath"
+        & "$SysmonDownloadDir\Sysmon.exe" -accepteula -i "$SysmonConfigFilePath"
     }
 } ElseIf ($ReconfigureSysmon) {
     Write-Output "Reconfigure Sysmon service to use the latest Config file"
