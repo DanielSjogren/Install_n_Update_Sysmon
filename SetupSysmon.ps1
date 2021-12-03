@@ -12,6 +12,8 @@ $ZipDownloadPath = "https://download.sysinternals.com/files/Sysmon.zip"
 $CheckForUpdatedVersion = $True
 $InstallNewVersion = $True
 
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 # Reset variables
 $InstallSysmonAsaService = $False
 $ReconfigureSysmon = $False
